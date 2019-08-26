@@ -2,11 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,
+        shrink-to-fit=no">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600"
         rel="stylesheet" type="text/css">
         <!-- Icons -->
-        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+        <link
+        href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
         rel="stylesheet" type="text/css">
 
         <!-- Stylesheet -->
@@ -35,7 +38,8 @@
                 </div>
             </div>
 
-            <button class="btn-rules" data-target="#rules"><i class="ion-ios-help-outline"></i>Rules</button>
+            <button class="btn-rules" data-target="#rules"><i class="ion-ios-help-outline">
+            </i>Rules</button>
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
@@ -53,16 +57,20 @@
 
         <!-- Rules Popup -->
         <div id="rules">
+          <div class="close-modal">&times;</div>
           <ul>
             <li>The game has 2 players, playing in rounds</li>
             <li>In each turn, a player rolls the dice as many times as he whishes.
-              Each result get added to his ROUND score</li>
-            <li>BUT, if the player rolls a 1, all his ROUND score gets lost.
-              After that, it's the next player's turn</li>
+              Each result gets added to his ROUND score</li>
+            <li>BUT, if the player rolls a 1, or a 6 twice in a row, all his ROUND
+              score gets lost. After that, it's the next player's turn</li>
             <li>The player can choose to 'Hold', which means that his ROUND
-              score gets added to his GLOBAL score. After that, it's the next player's turn</li>
-            <li>The first player to reach 100 points or a chosen Final Score on their GLOBAL score wins the game</li>
+              score gets added to his GLOBAL score. After that, it's the next
+              player's turn</li>
+            <li>The first player to reach 100 points or a chosen Final Score on
+              their GLOBAL score wins the game</li>
           </ul>
+          <div class="background">&nbsp;</div>
         </div>
 
         <!-- <script src="app.js"></script> -->

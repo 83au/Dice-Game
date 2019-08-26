@@ -1,57 +1,14 @@
 /**********************************************
 *** GENERAL
 **********************************************/
-
-label {
-  position: absolute;
-  left: 50%;
-  top: 480px;
-  transform: translateX(-50%);
-}
-
-label select {
-  background-color: #EB4D4D;
-}
-
-.final-score {
-  position: absolute;
-  left: 50%;
-  top: 530px;
-  transform: translateX(-50%);
-  color: #555;
-  font-size: 18px;
-  font-family: 'Lato';
-  text-align: center;
-  padding: 10px;
-  width: 160px;
-  text-transform: uppercase;
-}
-
-.fintal-score:focus {
-  outline: none;
-}
-
-.dice {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100px;
-  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
-}
-
-#dice-1 { top: 120px;}
-#dice-2 { top: 250px;}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -66,14 +23,60 @@ body {
     color: #555;
 }
 
+label {
+  position: absolute;
+  left: 50%;
+  top: 48rem;
+  transform: translateX(-50%);
+}
+
+label select {
+  background-color: #EB4D4D;
+}
+
+.final-score {
+  position: absolute;
+  left: 50%;
+  top: 53rem;
+  transform: translateX(-50%);
+  color: #555;
+  font-size: 1.8rem;
+  font-family: 'Lato';
+  text-align: center;
+  padding: 1rem;
+  width: 16rem;
+  text-transform: uppercase;
+}
+
+.fintal-score:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0px 1rem 6rem rgba(0, 0, 0, 0.10);
+}
+
+#dice-1 { top: 12rem;}
+#dice-2 { top: 25rem;}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .wrapper {
-    width: 1000px;
+    width: 100rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1rem 5rem rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
@@ -81,19 +84,19 @@ body {
 .player-1-panel {
     width: 50%;
     float: left;
-    height: 600px;
-    padding: 100px;
+    height: 60rem;
+    padding: 10rem;
 }
 
 #rules {
   transform: scale(0);
   position: absolute;
-  width: 40rem;
-  height: 40rem;
-  left: 19%;
-  bottom: 43%;
+  width: 50rem;
+  height: 50rem;
+  left: 25%;
+  bottom: 52%;
   border-radius: 50%;
-  background: #EB4D4D;
+  background: transparent;
   color: white;
   transition: .3s;
   transform-origin: center;
@@ -103,10 +106,29 @@ body {
   align-items: center;
 }
 
+#rules .close-modal {
+  position: absolute;
+  display: flex;
+  top: 8rem;
+  right: -5rem;
+  padding-bottom: 2px;
+  font-size: 4rem;
+  line-height: .5;
+  z-index: 20;
+  cursor: pointer;
+}
+
+#rules .close-modal:hover {
+  color: #EB4D4D;
+  background: white;
+}
+
 #rules ul {
   position: relative;
-  left: 50%;
+  bottom: 3rem;
+  left: 70%;
   transform: translateX(-50%);
+  z-index: 12;
 }
 
 #rules li {
@@ -117,9 +139,26 @@ body {
 }
 
 #rules.show {
-  transform: scale(2.2);
+  transform: scale(2);
   left: 24%;
   bottom: 0;
+}
+
+/* TODO: MAKE THIS FUNCTIONAL */
+
+.background {
+  position: fixed;
+  width: 50rem;
+  height: 50rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #EB4D4D;
+  transition: .3s;
+  transform-origin: center;
+}
+
+.background.show {
+  transform: scale(2);
 }
 
 /**********************************************
@@ -127,22 +166,22 @@ body {
 **********************************************/
 
 .player-name {
-    font-size: 40px;
+    font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 100;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     position: relative;
 }
 
 .player-score {
     text-align: center;
-    font-size: 80px;
+    font-size: 8rem;
     font-weight: 100;
     color: #EB4D4D;
-    margin-bottom: 130px;
+    margin-bottom: 13rem;
 }
 
 .active { background-color: #f7f7f7; }
@@ -150,11 +189,11 @@ body {
 
 .active .player-name::after {
     content: "\2022";
-    font-size: 47px;
+    font-size: 4.7rem;
     position: absolute;
     color: #EB4D4D;
     top: -7px;
-    right: 10px;
+    right: 1rem;
 
 }
 
@@ -163,31 +202,31 @@ body {
     color: #fff;
     width: 40%;
     margin: 0 auto;
-    padding: 12px;
+    padding: 1.2rem;
     text-align: center;
 }
 
 .player-current-label {
     text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 12px;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
     color: #222;
 }
 
 .player-current-score {
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 button {
     position: absolute;
-    width: 200px;
+    width: 20rem;
     left: 50%;
     transform: translateX(-50%);
     color: #555;
     background: none;
     border: none;
     font-family: Lato;
-    font-size: 20px;
+    font-size: 2rem;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 300;
@@ -195,7 +234,7 @@ button {
 }
 
 button:hover { font-weight: 600; }
-button:hover i { margin-right: 20px; }
+button:hover i { margin-right: 2rem; }
 
 button:focus {
     outline: none;
@@ -204,18 +243,18 @@ button:focus {
 i {
     color: #EB4D4D;
     display: inline-block;
-    margin-right: 15px;
-    font-size: 32px;
+    margin-right: 1.5rem;
+    font-size: 3.2rem;
     line-height: 1;
     vertical-align: text-top;
     margin-top: -4px;
     transition: margin 0.3s;
 }
 
-.btn-rules { top: 20px; left: 49%;}
-.btn-new { top: 70px;}
-.btn-roll { top: 370px;}
-.btn-hold { top: 420px;}
+.btn-rules { top: 2rem; left: 49%;}
+.btn-new { top: 7rem;}
+.btn-roll { top: 37rem;}
+.btn-hold { top: 42rem;}
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
