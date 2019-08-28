@@ -7,10 +7,14 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600"
         rel="stylesheet" type="text/css">
-        <!-- Icons -->
+        <!-- Icons
         <link
         href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
-        rel="stylesheet" type="text/css">
+        rel="stylesheet" type="text/css"> -->
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- Stylesheet -->
         <link type="text/css" rel="stylesheet" href="style.css">
@@ -37,12 +41,15 @@
                     <div class="player-current-score" id="current-1">0</div>
                 </div>
             </div>
-
-            <button class="btn-rules" data-target="#rules"><i class="ion-ios-help-outline">
-            </i>Rules</button>
-            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <!-- <i class="ion-ios-help-outline"></i>
+            <i class="ion-ios-plus-outline">
+            <i class="ion-ios-loop"></i>
+            <i class="ion-ios-download-outline">
+          -->
+            <button class="btn-rules" data-target="#rules"><i class="fa fa-question-circle"></i>Rules</button>
+            <button class="btn-new"><i class="fa fa-plus-circle"></i>New game</button>
+            <button class="btn-roll"><i class="fa fa-undo"></i>Roll dice</button>
+            <button class="btn-hold"><i class="fa fa-download"></i>Hold</button>
             <label for="number-of-dice">How many dice?
               <select name="Dice" id="number-of-dice">
                 <option value="1">1</option>
