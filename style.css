@@ -21,6 +21,7 @@ body {
     position: relative;
     height: 100vh;
     color: #555;
+    overflow: hidden;
 }
 
 label {
@@ -89,59 +90,55 @@ label select {
 }
 
 #rules {
-  transform: scale(0);
   position: absolute;
-  width: 50rem;
-  height: 50rem;
-  left: 25%;
-  bottom: 52%;
+
   border-radius: 50%;
   background: transparent;
   color: white;
+  transform: scale(0);
   transition: .3s;
   transform-origin: center;
   z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-#rules .close-modal {
+#rules.show .close-modal {
   position: absolute;
-  display: flex;
-  top: 8rem;
-  right: -5rem;
+  top: 10%;
+  right: 10%;
   padding-bottom: 2px;
-  font-size: 4rem;
+  font-size: 7rem;
   line-height: .5;
   z-index: 20;
   cursor: pointer;
 }
 
-#rules .close-modal:hover {
+#rules.show .close-modal:hover {
   color: #EB4D4D;
   background: white;
 }
 
 #rules ul {
-  position: relative;
-  bottom: 3rem;
-  left: 70%;
-  transform: translateX(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-40%, -40%);
   z-index: 12;
 }
 
 #rules li {
   max-width: 80%;
-  font-size: .5rem;
+  font-size: 2rem;
   line-height: 2;
   margin: 1rem 0;
 }
 
 #rules.show {
-  transform: scale(2);
-  left: 24%;
+  left: 0;
+  top: 0;
   bottom: 0;
+  right: 0;
+  transform: scale(1);
 }
 
 /* TODO: MAKE THIS FUNCTIONAL */
@@ -158,7 +155,7 @@ label select {
 }
 
 .background.show {
-  transform: scale(2);
+  transform: scale(8);
 }
 
 /**********************************************
